@@ -1,0 +1,326 @@
+/* --- PENGATURAN DASAR --- */
+html {
+    scroll-behavior: smooth;
+    /* Membuat efek scroll ke bawah jadi mulus */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    /* Warna latar abu-abu sangat muda yang bersih */
+    color: #333;
+}
+
+/* --- NAVIGASI (NAVBAR) --- */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 10;
+    /* Memastikan menu selalu di atas gambar */
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: #1e285d;
+}
+
+/* --- HERO SECTION (LAYAR UTAMA) --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+
+    /* MENGGANTI GAMBAR MENJADI HUT.jpg */
+    /* Kita pakai 0.7 (70% gelap) agar tulisan putihnya 'meledak' kontrasnya */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('HUT.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Tetap pakai efek parallax agar keren saat di-scroll */
+}
+
+.hero-content p {
+    font-size: 24px;
+    /* Ukurannya agak diperbesar sedikit */
+    font-weight: 300;
+    /* Dibuat agak tipis agar terlihat elegan */
+    letter-spacing: 1px;
+    /* Jarak antar huruf diperlebar sedikit */
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #e2e8f0;
+    text-transform: uppercase;
+    /* Membuatnya jadi huruf kapital semua agar tegas */
+}
+
+.badge {
+    background-color: #ff9800;
+    /* Aksen oranye modern */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    /* Diperbesar sedikit agar lebih gagah */
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 800;
+    /* Memberikan bayangan teks agar tulisan tidak 'tenggelam' di foto */
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #ff9800;
+    /* Kita ganti warnanya jadi oranye agar senada dengan badge */
+    text-transform: uppercase;
+}
+
+/* TOMBOL DAFTAR UTAMA */
+.btn-primary {
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(255, 152, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e68a00;
+    transform: translateY(-5px);
+    /* Efek tombol terangkat */
+    box-shadow: 0 15px 25px rgba(255, 152, 0, 0.6);
+}
+
+/* --- INFO SECTION (BAGIAN KARTU BAWAH) --- */
+.info-section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: #1e285d;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #64748b;
+    font-size: 18px;
+}
+
+/* Kumpulan Kartu (Grid) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-bottom: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #ff9800;
+    /* Garis bawah oranye muncul saat disentuh */
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #1e285d;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #1e285d;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* --- RESEP ANIMASI --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- TIMELINE SECTION --- */
+.timeline-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    /* Latar belakang putih agar kontras dengan hero */
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Garis vertikal di tengah */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    /* Posisi garis di sebelah kiri untuk tampilan mobile-friendly */
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 60px;
+    /* Jarak teks dari garis */
+    text-align: left;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Titik di garis timeline */
+.timeline-dot {
+    position: absolute;
+    left: 12px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff9800;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+    z-index: 2;
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: #ff9800;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.timeline-content {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px 0;
+    color: #1e285d;
+    font-size: 20px;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Delay animasi tiap item agar muncul bergantian */
+.timeline-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.timeline-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.timeline-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
