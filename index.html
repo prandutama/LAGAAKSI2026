@@ -808,7 +808,10 @@
 <body>
 
     <nav class="navbar" id="navbar">
-        <div class="logo">⚜️ LAGA AKSI</div>
+        <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+            <img src="logo.png" alt="Logo Laga Aksi" style="height: 100px; width: auto; object-fit: contain;">
+            <span>LAGA AKSI</span>
+        </div>
 
         <ul class="nav-menu">
             <li><a href="#about">Tentang</a></li>
@@ -821,8 +824,8 @@
                 </div>
             </li>
 
-            <li><a href="#timeline">📅 Jadwal</a></li>
-            <li><a href="#contact">📞 Kontak</a></li>
+            <li><a href="#timeline"> Jadwal</a></li>
+            <li><a href="#contact"> Kontak</a></li>
         </ul>
 
         <a href="#register" class="btn-nav-login">➔ Daftar Sekarang</a>
@@ -886,7 +889,7 @@
                 <li>Mengirimkan pas foto ukuran 3x4 <em>background</em> merah dengan format
                     <strong>Pangkalan_Nama.JPG</strong> (Maks. 10 MB).
                 </li>
-                <li>Mengirimkan bukti transfer pembayaran sebesar <strong>Rp 55.000</strong> <em>(Nomor rekening akan
+                <li>Mengirimkan bukti transfer pembayaran sebesar <strong>Rp 20.000</strong> <em>(Nomor rekening akan
                         diinfokan lebih lanjut)</em>.</li>
                 <li>Setiap pangkalan mengirimkan bukti telah <em>follow</em> akun Instagram LAGA AKSI III dan
                     <strong>@prandutama</strong>.
@@ -938,7 +941,7 @@
         <div class="timeline-container">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">30 Maret 2026</div>
+                <div class="timeline-date">17 April 2026</div>
                 <div class="timeline-content">
                     <h3>🟢 Pembukaan Pendaftaran</h3>
                     <p>Pendaftaran resmi dibuka. Siapkan berkas dan data anggota Sangga kamu.</p>
@@ -946,7 +949,7 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">12 April 2026</div>
+                <div class="timeline-date">25 April 2026</div>
                 <div class="timeline-content">
                     <h3>📋 Technical Meeting (TM)</h3>
                     <p>Pemaparan petunjuk teknis pelaksanaan dan sesi tanya jawab bersama panitia.</p>
@@ -954,7 +957,7 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">15 April 2026</div>
+                <div class="timeline-date">29 April 2026</div>
                 <div class="timeline-content">
                     <h3>🔴 Penutupan Pendaftaran</h3>
                     <p>Batas akhir penyerahan formulir pendaftaran dan pelunasan biaya administrasi.</p>
@@ -962,7 +965,7 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">18 April 2026</div>
+                <div class="timeline-date">2 Mei 2026</div>
                 <div class="timeline-content">
                     <h3>🏆 Hari Pelaksanaan</h3>
                     <p>Puncak acara LAGA AKSI 2026. Sampai jumpa di lapangan!</p>
@@ -1012,7 +1015,7 @@
                     <img src="https://ui-avatars.com/api/?name=Laga+Aksi&background=dc2743&color=fff&rounded=true&size=80"
                         alt="Laga Aksi" class="ig-avatar">
                     <div class="ig-info">
-                        <h4>@lagaaksi_man2</h4>
+                        <h4>@lagaaksi_</h4>
                         <p>Akun Resmi LAGA AKSI III</p>
                     </div>
                 </div>
@@ -1022,7 +1025,8 @@
                     <div class="stat-item"><span>🤝</span><br>Solidaritas</div>
                     <div class="stat-item"><span>🏆</span><br>Prestasi</div>
                 </div>
-                <a href="https://instagram.com/lagaaksi_man2" target="_blank" class="ig-follow-btn">Ikuti LAGA AKSI</a>
+                <a href="https://www.instagram.com/lagaaksi__/" target="_blank" class="ig-follow-btn">Ikuti
+                    lagaaksi_</a>
             </div>
 
             <div class="ig-card">
@@ -1064,7 +1068,9 @@
             document.getElementById('mobileMenu').classList.remove('open');
         }
 
-        const target = new Date('2026-04-18T08:00:00').getTime();
+        // TANGGAL DIUBAH KE 2 MEI 2026 (Format: YYYY-MM-DD)
+        const target = new Date('2026-05-02T08:00:00').getTime();
+
         function tick() {
             const diff = target - Date.now();
             if (diff <= 0) {
